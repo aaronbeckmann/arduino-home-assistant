@@ -16,7 +16,7 @@
     inline void setCurrentState(const type state) \
         { setCurrentState(HANumeric(state, _precision)); }
 
-#define HANUMBER_CALLBACK(name) void (*name)(HANumeric number, HANumber* sender)
+#define HANUMBER_CALLBACK(name) std::function<void(HANumeric, HANumber*)> name
 
 /**
  * HANumber adds a slider or a box in the Home Assistant panel
