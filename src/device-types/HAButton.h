@@ -5,7 +5,7 @@
 
 #ifndef EX_ARDUINOHA_BUTTON
 
-#define HABUTTON_CALLBACK(name) void (*name)(HAButton* sender)
+#define HABUTTON_CALLBACK(name) std::function<void(HAButton*)> name
 
 /**
  * HAButton represents a button that's displayed in the Home Assistant panel and
