@@ -5,8 +5,8 @@
 
 #ifndef EX_ARDUINOHA_SWITCH
 
-#define HASWITCH_CALLBACK(name) void (*name)(bool state, HASwitch* sender)
-
+#define HASWITCH_CALLBACK(name) std::function<void(bool, HASwitch*)>(name)
+            
 /**
  * HASwitch allows to display on/off switch in the HA panel and receive commands on your device.
  *
